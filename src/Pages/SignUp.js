@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import UserServices from "../Services/UserServices";
-import { toast } from "react-toastify";
-
 const SignUP = () => {
   const [formData, setFormData] = useState({
     yourName: "",
@@ -36,11 +34,11 @@ const SignUP = () => {
           replace: false,
         });
 
-        toast.success("Account Create Successfully");
+        alert("Account Create Successfully");
       })
       .catch((err) => {
         if (err.response.data) {
-          toast.error(err.response.data.message);
+          alert(err.response.data.message);
         }
       });
     console.log(data);
@@ -104,7 +102,7 @@ const SignUP = () => {
               onChange={handleChange}
             />
             <input
-              className="mt-3 border px-4 py-2 cursor-pointer bg-red-700 text-white rounded"
+              className="mt-3 border px-4 py-2 cursor-pointer bg-slate-800 text-white rounded"
               type="submit"
               placeholder="&bull;`&bull;&bull;&bull;&bull;&bull;&bull;"
             />
@@ -112,7 +110,7 @@ const SignUP = () => {
 
           <p className="text-center">
             Already have an account?
-            <Link to="/login" className="text-red-900">
+            <Link to="/login" className="text-slate-900">
               Login now
             </Link>
           </p>

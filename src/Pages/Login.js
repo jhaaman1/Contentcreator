@@ -88,14 +88,14 @@ const Login = () => {
             />
 
             <input
-              className="mt-3 border px-4 cursor-pointer rounded bg-red-700 py-2 text-white"
+              className="mt-3 border px-4 cursor-pointer rounded bg-slate-800 py-2 text-white"
               type="submit"
             />
           </form>
 
           <p className="text-center">
             Don`t have account?
-            <Link to="/signup" className="text-red-800 font-bold">
+            <Link to="/signup" className="text-slate-800 font-bold">
               Register now
             </Link>
           </p>
