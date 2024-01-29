@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_HOST = 'http://localhost:8080'
+const API_HOST = 'https://pink-happy-newt.cyclic.app'
 
 class UserServices {
   userlogin(data) {

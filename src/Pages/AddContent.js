@@ -45,9 +45,9 @@ const AddContent = () => {
       category: formData.category,
       difficultyLevel: formData.difficultyLevel,
       targetAudience: formData.targetAudience,
-      date: formData.date ? formData.date.toISOString() : null,
+      date: formData.date ? formData.date.toISOString() : null, // Format date
     };
-
+  
     ContentServices.createContent(data, auth.user)
       .then((res) => {
         console.log("Form Submitted. Response:", res);
@@ -59,7 +59,7 @@ const AddContent = () => {
           category: "",
           difficultyLevel: "",
           targetAudience: "",
-          date: null, 
+          date: "",
         });
       })
       .catch((err) => {
@@ -69,6 +69,7 @@ const AddContent = () => {
       });
     console.log(data);
   };
+  
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div
